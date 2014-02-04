@@ -1,0 +1,93 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    margin: 0;
+}
+
+#intro{
+    background: image-url("13.jpg") 50% 0 fixed;
+    color: white;
+    height: 600px;
+    width:100%;
+    margin: 0;
+    padding: 80px 0 0 0;
+}
+
+#second{
+  // background: image-url("secondBG.jpg") 50% 0 no-repeat fixed;
+  color: white;
+  height: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  background-color:white;
+  // display: block;
+}
+
+.story{
+    margin: 0 auto;
+    min-width: 980px;
+    width: 980px;
+    text-align: center;
+}
+
+.brand-name {
+  // text-align: center;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 80px;
+  color:#000000;
+  padding-bottom:60px;
+}
+
+.description {
+  // text-align: center;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 30px;
+  color:#000000 ;
+  max-width:400px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-bottom: 30px;
+}
+
+div.header-wrapper {
+  width:100%;
+  height:80px;
+  background-color: white;
+  color: black;
+}
+
+.header {
+  font-family: 'IM Fell English SC', serif;
+  font-size: 30px;
+  margin-left:11.8%;
+  padding-top:3%;
+}
+
+.gallery {
+  margin-top: 10px;
+  width:60%;
+  height:60%;
+  // background-color: white;
+  background: image-url("hearts.jpg") 50% 0 no-repeat fixed;
+  display: inline-block;
+}
+
+div.side-menu {
+  margin-top: 10px;
+  color:black;
+  background-color: yellow;
+  width: 10%;
+  display: inline-block;
+  height: 60%;
+  float: left;
+}
+
+
+
+
+
+
+
