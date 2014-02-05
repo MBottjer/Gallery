@@ -168,7 +168,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt-ruby (= 3.1.2)
+  bcrypt-ruby (~> 3.1.2)
   capybara
   capybara-email
   coffee-rails (~> 4.0.0)

@@ -35,6 +35,10 @@ describe User do
     expect(@user).to respond_to("authenticate")
   end
 
+  it "should respond to remember_token" do 
+    expect(@user).to respond_to("remember_token")
+  end
+
   describe "when name is not present" do
     before { @user.name = " " }
     it { should_not be_valid }
@@ -116,6 +120,12 @@ describe User do
   describe "with a password that's too short" do
     before { @user.password = @user.password_confirmation = "a" * 5 }
     it { should be_invalid }
+  end
+
+  describe "remember token" do
+    before { @user.save }
+    it { expect(@user.remember_token).not_to be_blank }
+    # alternatively we can write this as: its(:remember_token) { should_not be_blank }
   end
 
 end
