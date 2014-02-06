@@ -39,24 +39,14 @@
         </div>
         <div class="story gallery">
             <ul class="example-orbit" data-orbit>
+              <% @products.each do |product| %>
               <li>
-                <%= image_tag @first_product.photo.url %>
+                <%= image_tag product.photo.url %>
                 <div class="orbit-caption">
-                  Caption One.
+                <%= product.description %>
                 </div>
               </li>
-              <li>
-                <%= image_tag @second_product.photo.url %>
-                <div class="orbit-caption">
-                <%= @second_product.description %>
-                </div>
-              </li>
-              <li>
-                <img src="../assets/img/examples/launch-orbit.jpg" alt="slide 3" />
-                <div class="orbit-caption">
-                  Caption Three.
-                </div>
-              </li>
+              <% end %>
             </ul>
       </div>
 
