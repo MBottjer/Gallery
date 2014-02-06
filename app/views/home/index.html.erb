@@ -7,8 +7,7 @@
       <div id="intro">
         <div class="story">
             <div class="brand-name">Shepherd-Ashby Ltd.</div>
-            <!-- <img src="/assets/small-logo.png"> -->
-            <script> $('.brand-name').arctext({radius: 600}); </script>
+
             <div class="description">We create bespoke furniture, upscale classic pieces and have a passion for ingenuitive design. </div>
             <img src="/assets/arrow.png">
         </div> <!--.story-->
@@ -18,36 +17,11 @@
         <div class="header-wrapper">
           <div class="header">Shepherd-Ashby</div>
         </div>
-        <div class="side-menu">
-          <ul>
-            <li>
-              <a href="#">HOME</a>
-            </li>
-            <li>
-              <a href="#">BESPOKE</a>
-            </li>
-            <li>
-              <a href="#">COLLECTIONS</a>
-            </li>
-            <li>
-              <a href="#">ABOUT US</a>
-            </li>
-            <li>
-              <a href="#">CONTACT US</a>
-            </li>
-          </ul>
-        </div>
-        <div class="story gallery">
-            <ul class="example-orbit" data-orbit>
-              <% @products.each do |product| %>
-              <li>
-                <%= image_tag product.photo.url %>
-                <div class="orbit-caption">
-                <%= product.description %>
-                </div>
-              </li>
-              <% end %>
-            </ul>
+
+        <%= render 'side_menu' %>
+
+        <%= render 'gallery' %>
+
       </div>
 
       <div id="third">
