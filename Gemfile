@@ -31,6 +31,8 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem "paperclip", "~> 3.0"
 
+gem 'foundation-rails'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

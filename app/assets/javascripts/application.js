@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require circletype.min
 //= require plugins
 //= require jquery.arctext
@@ -20,3 +21,5 @@
 
 
 
+
+$(function(){ $(document).foundation(); });
