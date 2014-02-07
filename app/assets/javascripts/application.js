@@ -23,13 +23,23 @@ $(function(){ $(document).foundation();
 });
 
 $(document).ready(function() {
-  $('#my-link').click(function(event){
-    $(".gallery").html("<%= escape_javascript(render(:partial => 'views/home/gallery') %>")
-    event.preventDefault(); // Prevent link from following its href
-  });
+  $('.brand-name').arctext({radius: 600});
+
 });
 
-
 $(document).ready(function() {
-  $('.brand-name').arctext({radius: 600});
+  $("#mylink").click(function() {
+      $.ajax({
+          type: "GET",
+          url: "http://localhost:3000/home/index.json",
+          dataType: "json",
+          success: function(result) {
+            for( object in result ) {
+              // result.sort(function(a,b){ return Date.parse(a.pushed_at) - Date.parse(b.pushed_at)})
+              console.log(result[object])
+            }
+          }
+      });
+  });
+
 });
