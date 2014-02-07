@@ -15,12 +15,21 @@
 //= require jquery.arctext
 //= require foundation
 //= require turbolinks
+//= require jsapi 
+//= require mustache
 //= require_tree .
 
-
-
-
 $(function(){ $(document).foundation(); 
-$('.brand-name').arctext({radius: 600});
 });
 
+$(document).ready(function() {
+  $('#my-link').click(function(event){
+    $(".gallery").html("<%= escape_javascript(render(:partial => 'views/home/gallery') %>")
+    event.preventDefault(); // Prevent link from following its href
+  });
+});
+
+
+$(document).ready(function() {
+  $('.brand-name').arctext({radius: 600});
+});

@@ -1,7 +1,10 @@
 class HomeController < ApplicationController
   def index
     @products = Product.all
-    @first_product = Product.first
-    @second_product = Product.all[1]
+    @categories = Category.all
+    # respond_to do |format|
+    #   format.html
+    #   format.json {render json: @products}
+    # end
   end
 end
