@@ -34,10 +34,25 @@ $(document).ready(function() {
           url: "http://localhost:3000/home/index.json",
           dataType: "json",
           success: function(result) {
-            for( object in result ) {
+            // for( object in result ) {
               // result.sort(function(a,b){ return Date.parse(a.pushed_at) - Date.parse(b.pushed_at)})
-              console.log(result[object])
-            }
+              // console.log(result[object])
+              console.log(result.products)
+              result = result.products
+
+              var n = 1
+
+              for (object in result) {
+                if (result[object].category === 2) {
+
+                  $('.example-orbit').append(
+                    "<li>" + "<img src=" + result[object].photo + " alt='slide " + n +"'/>" + "<div class='orbit-caption'>" + result[object].description + "</div>" + "</li>"
+                    );
+                console.log(result[object].name)
+                n += 1
+                }
+              }
+            // }
           }
       });
   });
