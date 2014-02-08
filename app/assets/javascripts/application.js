@@ -43,20 +43,26 @@ function devesh(result, category_id){
     }
 }
 
+
+
+function getJsonViaAjax(url, category_id){
+  $.ajax({
+            type: "GET",
+            url: url,
+            dataType: "json",
+            success: function(result) {
+
+                result = result.products
+
+            devesh(result, category_id)
+            }
+        });
+}
+
 $(document).ready(function() {
   // need logic for if this clicked var changes if statement to be appropriate category
   $("#mylink").click(function() {
-      $.ajax({
-          type: "GET",
-          url: "http://localhost:3000/home/index.json",
-          dataType: "json",
-          success: function(result) {
-
-              result = result.products
-
-          devesh(result, 2)
-          }
-      });
+      getJsonViaAjax("http://localhost:3000/home/index.json", 2)
   });
 
 });
