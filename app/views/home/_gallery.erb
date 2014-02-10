@@ -1,4 +1,14 @@
 <div class="story gallery">
-  <ul class='example-orbit' data-orbit>
+  <ul class="example-orbit" data-orbit>
+    <% @products.each do |product| %>
+    <li>
+      <% if product.category_id == 1 %>
+      <%= image_tag product.photo.url %>
+      <div class="orbit-caption">
+      <%= product.description %>
+      </div>
+    </li>
+    <% end %>
+    <% end %>
   </ul>
 </div>

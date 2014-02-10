@@ -27,23 +27,23 @@ $(document).ready(function() {
 
 });
 
-function devesh(result, category_id){
-    var n = 1
-
+function iterateThroughPhotos(result, category_id){
+    var slide_number = 1
     for (object in result) {
         if (result[object].category === category_id) {
 
-          $('.example-orbit').append(
-            "<li>" + "<img src=" + result[object].photo + " alt='slide " + n +"'/>" + "<div class='orbit-caption'>" + result[object].description + "</div>" + "</li>"
-            );
-
-        n += 1
-
-        }
+          appendOrbitSlider(result, slide_number)
+        slide_number += 1
+      }
     }
 }
 
+function appendOrbitSlider(result, slide_number) {
 
+    $('.example-orbit').append(
+              "<li>" + "<img src=" + result[object].photo + " alt='slide " + slide_number +"'/>" + "<div class='orbit-caption'>" + result[object].description + "</div>" + "</li>"
+    );
+}
 
 function getJsonViaAjax(url, category_id){
   $.ajax({
@@ -51,18 +51,63 @@ function getJsonViaAjax(url, category_id){
             url: url,
             dataType: "json",
             success: function(result) {
-
                 result = result.products
 
-            devesh(result, category_id)
+                iterateThroughPhotos(result, category_id)
             }
         });
 }
 
 $(document).ready(function() {
   // need logic for if this clicked var changes if statement to be appropriate category
-  $("#mylink").click(function() {
+  // $("#bespoke").click(function() {
+  //   $('.example-orbit').empty();
+  //     getJsonViaAjax("http://localhost:3000/home/index.json", 2)
+  // });
+
+  var elemm = document.getElementById('bespoke')
+  elemm.onclick = function() { 
+    // $('.example-orbit').fadeOut();
+    $('.example-orbit').empty();
       getJsonViaAjax("http://localhost:3000/home/index.json", 2)
+   };
+
+  $("#home").click(function() {
+    $('.example-orbit').empty();
+      getJsonViaAjax("http://localhost:3000/home/index.json", 1)
   });
+
+});
+
+
+
+$(document).ready(function(){
+
+    // var scrolled=0;
+
+    $("#arrow").on("click" ,function(){
+                scrolled=650;
+        
+        $('body, html').animate({
+                scrollTop:  scrolled
+           });
+
+      });
+
+    
+    $("#upClick").on("click" ,function(){
+        scrolled=scrolled-300;
+        
+        $(".cover").animate({
+                scrollTop:  scrolled
+           });
+
+      });
+
+
+$(".clearValue").on("click" ,function(){
+        scrolled=0;
+    });
+
 
 });
