@@ -5,6 +5,7 @@ $(document).foundation({
       pause_on_hover:true
       animation_speed:500
       navigation_arrows:true
-  };
+      slide_number:false,
+  }
 });
 
