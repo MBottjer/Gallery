@@ -83,9 +83,9 @@ $(document).ready(function() {
 
 $(document).ready(function(){
 
-    // var scrolled=0;
+    var elemm = document.getElementById('arrow')
 
-    $("#arrow").on("click" ,function(){
+    $(elemm).on("click" ,function(){
                 scrolled=650;
         
         $('body, html').animate({
@@ -94,20 +94,31 @@ $(document).ready(function(){
 
       });
 
-    
-    $("#upClick").on("click" ,function(){
-        scrolled=scrolled-300;
+    $('#aboutUs').on("click" ,function(){
+                scrolled=1350;
         
-        $(".cover").animate({
+        $('body, html').animate({
                 scrollTop:  scrolled
            });
 
       });
 
 
-$(".clearValue").on("click" ,function(){
-        scrolled=0;
-    });
+
+    
+//     $("#upClick").on("click" ,function(){
+//         scrolled=scrolled-300;
+        
+//         $(".cover").animate({
+//                 scrollTop:  scrolled
+//            });
+
+//       });
+
+
+// $(".clearValue").on("click" ,function(){
+//         scrolled=0;
+//     });
 
 
 });
