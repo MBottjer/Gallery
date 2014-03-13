@@ -1,18 +1,20 @@
-<% provide(:title, "Sign in") %>
-<h1>Sign in</h1>
+<div class="signInBackground">
+  <% provide(:title, "Sign in") %>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(:session, url: sessions_path) do |f| %>
+  <div class="signInWrapper">
+    <div class="row">
+      <div class="span6 offset3">
+        <h1 class="signIn">Sign in</h1>
+        <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+          <%= f.text_field :email, placeholder: "Email" %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+          <%= f.password_field :password, placeholder: "Password" %>
 
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-    <% end %>
+          <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+        <% end %>
 
+      </div>
+    </div>
   </div>
 </div>

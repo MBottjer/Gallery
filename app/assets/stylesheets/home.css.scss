@@ -35,6 +35,14 @@ body {
   padding-bottom: 30px;
 }
 
+p.clickMe {
+  color: black;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 20px;
+  padding: 3px 20px;
+  letter-spacing: 0.1em;
+}
+
 // Shared
 
 .story {
@@ -160,6 +168,52 @@ div.orbit-container {
   height: 650px;
   width:100%;
   margin: 0;
+}
+
+// sign in page
+
+div.signInBackground {
+   background: image-url("frontweb.jpg");
+   height: 650px;
+   width:100%;
+   background-size:100% 650px;
+   background-repeat:no-repeat;
+
+}
+
+div.signInWrapper {
+  width: 400px;
+  height: 300px;
+  // background-color: white;
+  padding:10px;
+}
+
+h1.signIn {
+  font-size: 60px;
+}
+
+// control management system page
+
+div.productForm {
+  width: 500px;
+  background-color:white;
+  margin:auto;
+  margin-top: 50px;
+  padding:20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  color: black;
+}
+
+li.cmsSignOut {
+  float:right;
+  margin-top: 25px;
+}
+
+p.titleProducts {
+  font-size:20px;
+  letter-spacing: 0.1em;
 }
 
 

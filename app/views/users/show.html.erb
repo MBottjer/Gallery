@@ -1,5 +1,35 @@
-<%= @user.name %>, <%= @user.email %>
+<div id="second">
+  <div class="header-wrapper">
+    <div class="header">
+      <ul>
+        <li class="company_name"> <%= @user.name %> </li>
+        <li class="cmsSignOut">
+          <%= link_to "SIGN OUT", signout_path, method: "delete" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+  <div class="large-6 columns">
+    <div class="productForm">
+      <p class="titleProducts"> + Photos </p>
+      <%= render 'products/product_form' %>
 
-<%= link_to "Sign out", signout_path, method: "delete" %>
+    </div>
+  </div>
+  <div class="large-6 columns">
+    <div class="productForm">
+      <p class="titleProducts"> Current Photos </p>
+      <div class="photoDisplay">
+      </div>
 
-<%= render 'products/product_form' %>
+    </div>
+  </div>
+  </div>
+    
+</div>
+
+
+  
+
+  
