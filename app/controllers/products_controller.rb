@@ -5,9 +5,33 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to user_path(current_user.id)
     else
-      flash[:notice] = 'Sorry, there were the following errors: @offer.errors.full_messages'
-      render '/users/#{current_user.id}'
+      render '_product_form'
     end
+  end
+
+  def update 
+    @product = Product.find(params[:id])
+
+    if @product.update(product_params)
+      redirect_to user_path(current_user.id)
+    else
+      render '_edit'
+    end
+  end
+
+  def edit 
+    @product_id = Product.find(params[:id])
+  end
+
+  def show 
+    @product = Product.find(params[:id])
+  end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+   
+    redirect_to user_path(current_user.id)
   end
 
 

@@ -1,5 +1,15 @@
 <%= form_for @product, :html => { :multipart => true } do |f| %>
-
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited
+        this post from being saved:</h2>
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
   <p>
     <%= f.file_field :photo %>
   <p>  

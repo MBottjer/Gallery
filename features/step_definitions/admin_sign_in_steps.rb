@@ -18,7 +18,7 @@ end
 # Signing Out
 
 Given(/^that I am on the admin page$/) do
-  expect(page).to have_content "Sign out"
+  expect(page).to have_content "SIGN OUT"
 end
 
 When(/^I press sign out$/) do

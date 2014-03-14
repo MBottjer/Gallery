@@ -9,5 +9,3 @@
 Category.delete_all
 home = Category.create name: 'Home'
 bespoke = Category.create name: 'Bespoke'
-cards = Category.create name: 'Cards'
-tables = Category.create name: 'tables, desks and dressing tables'
