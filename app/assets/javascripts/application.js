@@ -59,11 +59,6 @@ function getJsonViaAjax(url, category_id){
 }
 
 $(document).ready(function() {
-  // need logic for if this clicked var changes if statement to be appropriate category
-  // $("#bespoke").click(function() {
-  //   $('.example-orbit').empty();
-  //     getJsonViaAjax("http://localhost:3000/home/index.json", 2)
-  // });
 
   var elemm = document.getElementById('bespoke')
   elemm.onclick = function() { 
@@ -93,24 +88,5 @@ $(document).ready(function(){
            });
 
       });
-
-
-
-
-    
-//     $("#upClick").on("click" ,function(){
-//         scrolled=scrolled-300;
-        
-//         $(".cover").animate({
-//                 scrollTop:  scrolled
-//            });
-
-//       });
-
-
-// $(".clearValue").on("click" ,function(){
-//         scrolled=0;
-//     });
-
 
 });

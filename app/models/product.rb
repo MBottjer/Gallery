@@ -4,6 +4,6 @@ class Product < ActiveRecord::Base
   validates :description, presence: true
   
 
-  has_attached_file :photo, :styles => { :small => "50x50>"}
+  has_attached_file :photo, :styles => { :small => "50x50>", :large => "980x480>"}
   validates_attachment_presence :photo
 end
