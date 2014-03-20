@@ -8,4 +8,4 @@
 
 Category.delete_all
 home = Category.create name: 'Home'
-bespoke = Category.create name: 'Bespoke'
+bespoke = Category.create name: 'For Sale'

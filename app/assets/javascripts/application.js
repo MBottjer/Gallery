@@ -94,14 +94,6 @@ $(document).ready(function(){
 
       });
 
-    $('#aboutUs').on("click" ,function(){
-                scrolled=1350;
-        
-        $('body, html').animate({
-                scrollTop:  scrolled
-           });
-
-      });
 
 
 

@@ -21,32 +21,7 @@
     <div class="productForm">
       <p class="titleProducts"> Current Photos </p>
       <p> click photos to Edit or Delete </p>
-      <div class="photoDisplay">
-        <% id = 0 %>
-        <% @products.each do |product| %>
-          <a data-reveal-id="photoEdit<%= id %>"><%= image_tag product.photo.url(:small) %></a>
-          <div id="photoEdit<%= id %>" class="reveal-modal" data-reveal>
-            <%= form_for product, :html => { :multipart => true } do |f| %>
-              
-              <p>
-                <%= f.file_field :photo %>
-              <p>  
-                <%= f.text_field :name, placeholder: "Name" %>  
-              </p>  
-              <p>  
-                <%= f.text_field :description, placeholder: "Description" %>  
-              </p>  
-              <p>  
-                <%= f.label :category_id %>  
-                <%= f.collection_select :category_id, Category.all, :id, :name %>
-              </p>   
-              <p><%= f.submit %></p>  
-            <% end %>
-            <%= link_to 'Delete', product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>
-          <% id += 1 %>
-        <% end %>
-      </div>
+      <%= render 'products/edit' %>
 
     </div>
   </div>
