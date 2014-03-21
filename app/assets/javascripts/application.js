@@ -80,7 +80,7 @@ $(document).ready(function(){
 
     var elemm = document.getElementById('arrow')
 
-    $(elemm).on("click" ,function(){
+    $(elemm).on("click" ,function() {
                 scrolled=650;
         
         $('body, html').animate({
@@ -88,5 +88,5 @@ $(document).ready(function(){
            });
 
       });
-
 });
+

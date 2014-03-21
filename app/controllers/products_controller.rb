@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
 
+  def new 
+  end
+
   def create
     @product = Product.new(product_params)
     if @product.save

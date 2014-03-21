@@ -31,6 +31,8 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem "paperclip", "~> 3.0"
 
+gem 'aws-sdk'
+
 gem 'foundation-rails'
 
 gem 'jbuilder', '~> 1.2'
