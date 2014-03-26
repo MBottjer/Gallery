@@ -25,7 +25,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
 
 gem 'bcrypt-ruby', '~> 3.1.2'
 
