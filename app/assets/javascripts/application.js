@@ -49,7 +49,7 @@ function getJsonViaAjax(url, category_id){
   $.ajax({
             type: "GET",
             url: url,
-            dataType: "json",
+            dataType: "jsonp",
             success: function(result) {
                 result = result.products
 
@@ -64,12 +64,12 @@ $(document).ready(function() {
   elemm.onclick = function() { 
     // $('.example-orbit').fadeOut();
     $('.example-orbit').empty();
-      getJsonViaAjax("www.countryrosefurniture.co.uk/home/index.json", 2)
+      getJsonViaAjax("http://www.countryrosefurniture.co.uk/home/index.json", 2)
    };
 
   $("#home").click(function() {
     $('.example-orbit').empty();
-      getJsonViaAjax("www.countryrosefurniture.co.uk/home/index.json", 1)
+      getJsonViaAjax("http://www.countryrosefurniture.co.uk/home/index.json", 1)
   });
 
 });
