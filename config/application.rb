@@ -23,16 +23,6 @@ module SideProject
     # config.i18n.default_locale = :de
 
     config.assets.initialize_on_precompile = false
-
-    after_filter :cors_set_access_control_headers
-
-
-def cors_set_access_control_headers
-    headers['Access-Control-Allow-Origin']      = '*'
-    headers['Access-Control-Allow-Methods']     = 'POST, GET, OPTIONS'
-    headers['Access-Control-Max-Age']           = '1728000'
-    headers['Access-Control-Allow-Credentials'] = 'true'
-  end
     
   end
 end
