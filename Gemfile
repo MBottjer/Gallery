@@ -38,6 +38,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'rack-cors', :require => 'rack/cors'
 
+gem "font-awesome-rails"
+
 group :production do
   gem 'rails_12factor'
 end
